@@ -1,0 +1,29 @@
+body{
+    min-height: 100vh;
+    width: 100%; 
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: blue;
+}
+ 
+.d-inline-block{
+    width: 50px;
+    height: 40px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remover sublinhado do link */
+    color: white; /* Cor do texto */
+}
+  
+.navbar-brand img {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}

@@ -1,7 +1,7 @@
 .login_container {
     display: flex;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
 }
   
@@ -13,10 +13,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     flex: 1;
-    text-align: center;
-    gap: 3.43vw;
+    gap: 1.43vw;
 }
 
 .logo{
@@ -26,28 +24,39 @@
 }
 
 .logo img{
-    width: 11.43vw;
+    width: 9.43vw;
+    
 }
 
 
-.textologo{
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-}  
+h1 {
+    margin: 0; /* Remova o espaçamento padrão do título */
+}
 
 .login_forms {
     display: flex;
     flex-direction: column;
-    gap: 4.5vh;
+    gap: 2.5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-link{
+    text-decoration: none;
 }
   
-.login_forms label {
-    text-align: left;
+.form-label {
+    width: 35.89vw;
+}
+
+.btn-primary{
+    width: 35.89vw;
 }
   
 .texto_primeiro_acesso {
     font-size: 1.2rem;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-align: center;
     margin-top: 7.14vh;
@@ -60,7 +69,7 @@
     text-decoration: none;
     color: #429ee0;
     font-weight: 600;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
   
@@ -76,7 +85,6 @@
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    padding: 2rem;
     color: #fff;
     flex: 1;
     background-color: #7d53bd;
