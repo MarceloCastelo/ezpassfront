@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Senhas</title>
+</head>
+<body>
+
+<div class="header-container">
+  <h2>EZPASS</h2>
+  <h2><span id="siteCount"></span> Sites Armazenados</h2>
+  <div>
+    <input type="text" id="searchInput" placeholder="Pesquisar por nome...">
+    <button id="searchButton">Pesquisar</button>
+    <button id="addSiteButton">Adicionar Site</button>
+  </div>
+</div>
+
+<table id="passwordTable">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>URL</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+    <!-- Dados das senhas serão inseridos aqui -->
+  </tbody>
+</table>
+
+<!-- Modal para adicionar novo site -->
+<div id="addSiteModal" style="display:none;">
+  <h2>Adicionar Novo Site</h2>
+  <input type="text" id="siteName" placeholder="Nome do Site">
+  <input type="text" id="siteUrl" placeholder="URL do Site">
+  <button id="saveSiteButton">Salvar</button>
+  <button id="closeModalButton">Fechar</button>
+</div>
+
+<script src="../script/home.js"></script>
+
+</body>
+</html>
