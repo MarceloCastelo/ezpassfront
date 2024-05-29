@@ -1,0 +1,91 @@
+.login_container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+  
+
+/* FORMS LOGIN  */
+
+.login_forms_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+    gap: 3.43vw;
+}
+
+.logo{
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os elementos */
+    
+}
+
+.logo img{
+    width: 11.43vw;
+}
+
+
+.textologo{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}  
+
+.login_forms {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5vh;
+}
+  
+.login_forms label {
+    text-align: left;
+}
+  
+.texto_primeiro_acesso {
+    font-size: 1.2rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 7.14vh;
+    margin-bottom: 1.55vh;
+    color: #000;
+}
+  
+.link_login {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #429ee0;
+    font-weight: 600;
+    font-family: "Source Sans 3", sans-serif;
+    text-align: center;
+}
+  
+  /* FORMS LOGIN  */
+  
+  /* -----------------------  */
+  
+  /* BACKGROUND LOGIN */
+  
+.background_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    color: #fff;
+    flex: 1;
+    background-color: #7d53bd;
+}
+  
+  
+.background_login img {
+    width: 500px;
+    height: 426.67px;
+}
+  
+  /* BACKGROUND LOGIN */
