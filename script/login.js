@@ -4,14 +4,31 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.querySelector('#exampleInputPassword1');
     const loginButton = document.querySelector('.btn-primary');
 
+    function clearErrorMessages() {
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(function (msg) {
+            msg.remove();
+        });
+    }
+
+    function displayErrorMessage(inputElement, message) {
+        const errorMessage = document.createElement('p');
+        errorMessage.className = 'error-message';
+        errorMessage.style.color = 'red';
+        errorMessage.textContent = message;
+        inputElement.parentElement.appendChild(errorMessage);
+    }
+
     loginButton.addEventListener('click', async function (event) {
         event.preventDefault();
+
+        clearErrorMessages();
 
         const email = emailInput.value;
         const password = passwordInput.value;
 
         if (!email || !password) {
-            alert('Por favor, preencha todos os campos.');
+            displayErrorMessage(form, 'Por favor, preencha todos os campos.');
             return;
         }
 
@@ -29,14 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (response.ok) {
                 const data = await response.json();
-                alert('Login realizado com sucesso!');
-                window.location.href = './home.html'; // Redirect to home page
+                console.log(form, 'Login realizado com sucesso!', 'success');
+                setTimeout(() => {
+                    window.location.href = './home.html'; // Redirect to home page
+                }, 2000);
             } else {
-                alert('Erro no login. Verifique suas credenciais e tente novamente.');
+                displayErrorMessage(form, 'Erro no login. Verifique suas credenciais e tente novamente.');
             }
         } catch (error) {
             console.error('Erro:', error);
-            alert('Erro no login. Tente novamente.');
+            displayErrorMessage(form, 'Erro no login. Tente novamente.');
         }
     });
 });

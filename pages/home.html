@@ -14,14 +14,15 @@
         <img src="./assets/LogoBranco.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
         EzPass
       </a>
+      <button id="logoutButton" type="button" class="btn btn-outline-light">Sair</button>
     </div>
   </nav>
   <div class="header-container">
     <h2><span id="siteCount"></span> Sites Armazenados</h2>
     <div class="pesquisaSites">
       <input type="text" class="form-control" id="searchInput" aria-describedby="searchHelp" placeholder="Pesquisar por nome...">
-      <button id="addSiteButton" type="button" class="btn btn-primary">Adicionar Site</button>
       <button id="searchButton" type="button" class="btn btn-primary">Pesquisar</button>
+      <button id="addSiteButton" type="button" class="btn btn-primary">Adicionar Site</button>
     </div>
   </div>
 
@@ -48,5 +49,10 @@
   <script src="https://cdn.jsdelivr.net/npm/js-sha1"></script>
   <script src="../script/home.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('logoutButton').addEventListener('click', function() {
+      window.location.href = './login.html'; // Substitua pelo caminho da sua tela de login
+    });
+  </script>
 </body>
 </html>
