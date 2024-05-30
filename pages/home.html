@@ -19,15 +19,14 @@
     <div class="header-container">
       
       <h2><span id="siteCount"></span> Sites Armazenados</h2>
-      <div>
-        <input type="text" id="searchInput" placeholder="Pesquisar por nome...">
-        <button id="searchButton">Pesquisar</button>
-        <button id="addSiteButton">Adicionar Site</button>
-        
+      <div class="pesquisaSites">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pesquisar por nome..." id="searchInput">
+        <button id="addSiteButton" type="button" class="btn btn-primary">Adicionar Site</button>
+        <button id="addSiteButton" type="button" class="btn btn-primary">Pesquisar</button>
       </div>
     </div>
 
-    <table id="passwordTable">
+    <table class="tabela" id="passwordTable">
       <thead>
         <tr>
           <th>Nome</th>
@@ -41,12 +40,13 @@
     </table>
 
     <!-- Modal para adicionar novo site -->
-    <div id="addSiteModal" style="display:none;">
+    <div class="addSiteModal" id="addSiteModal" style="display:none;">
       <h2>Adicionar Novo Site</h2>
       <input type="text" id="siteName" placeholder="Nome do Site">
       <input type="text" id="siteUrl" placeholder="URL do Site">
       <button id="saveSiteButton">Salvar</button>
       <button id="closeModalButton">Fechar</button>
+      
     </div>
 
     <script src="../script/home.js"></script>

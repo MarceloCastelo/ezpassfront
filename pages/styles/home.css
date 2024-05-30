@@ -10,6 +10,7 @@ nav {
     align-items: center;
     padding: 5px;
     background-color: blue;
+    margin-bottom: 1.5625vw;
 }
  
 .d-inline-block{
@@ -26,4 +27,42 @@ nav {
   
 .navbar-brand img {
     margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+#siteCount{
+    
+}
+
+.pesquisaSites{
+    display: flex;
+    gap: 1.04vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.60vw;
+}
+
+.form-control{
+    width: 20.83vw;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;   
+}
+
+.tabela th {
+    padding: 10px 80px; 
+    
+}
+
+.addSiteModal {
+   background-color: aqua;
 }
