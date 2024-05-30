@@ -62,10 +62,24 @@ document.addEventListener("DOMContentLoaded", function () {
           const nameCell = document.createElement("td");
           nameCell.textContent = entry.name;
           row.appendChild(nameCell);
+          
+          function createBootstrapButton(text, onClick, styles) {
+            const button = document.createElement("button");
+            button.className = "btn btn-primary"; // Classes do Bootstrap
+            button.textContent = text;
+            button.onclick = onClick;
+            
+            // Adicionar estilos inline
+            if (styles) {
+                Object.assign(button.style, styles);
+            }
+            
+            return button;
+          }
 
           // Coluna das ações
           const actionsCell = document.createElement("td");
-          const viewButton = createButton("Visualizar", () => viewSite(entry));
+          const viewButton = createBootstrapButton("Visualizar", () => viewSite(entry));
           actionsCell.appendChild(viewButton);
           row.appendChild(actionsCell);
 
@@ -78,6 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let viewPopup;
 
   async function viewSite(site) {
+    
+      
+    
       const siteInfo = `
           <h2>Informações do Site</h2>
           <p><strong>Nome:</strong> ${site.name}</p>
@@ -86,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <p><strong>Senha:</strong> ${site.password}</p>
           <p><strong>Nota:</strong> ${site.note}</p>
       `;
+
+      
 
       const editButton = createButton("Editar", () => editSite(site));
       const deleteButton = createButton("Deletar", () => deleteSite(site));
@@ -135,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function editSite(site) {
       const editForm = `
-          <form id="editForm">
+          <form id="editForm">  
               <label for="editName">Nome:</label><br>
               <input type="text" id="editName" name="editName" value="${site.name}" required><br>
               <label for="editURL">URL:</label><br>

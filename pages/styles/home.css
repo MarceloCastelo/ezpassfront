@@ -29,9 +29,6 @@ nav {
     margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
-#siteCount{
-    
-}
 
 .pesquisaSites{
     display: flex;
@@ -52,17 +49,18 @@ nav {
 }
 
 .tabela{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;   
+    width: 100%;
+    table-layout: fixed; /* Garante que as colunas tenham larguras fixas */
+    margin-top: 50px;
+    text-align: center;
+    border-collapse: collapse;
 }
 
 .tabela th {
-    padding: 10px 80px; 
-    
+    padding: 10px 80px;    
 }
 
-.addSiteModal {
-   background-color: aqua;
+.tabela td {
+    padding: 10px 80px; 
 }
+
